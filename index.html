@@ -71,12 +71,18 @@ video {
     </p>
     <button id="start">▶ 播放</button>
 
-    <video id="video" controls playsinline
-           style="display:none">
-      <source src="horror.mp4" type="video/mp4">
-      無法播放影片。
-    </video>
-  </div>
+    <div class="player">
+  <video
+    id="video"
+    controls
+    playsinline
+    preload="metadata"
+    style="width:100%; display:block;"
+  >
+    <source src="./horror.mp4" type="video/mp4">
+    您的瀏覽器不支援影片播放。
+  </video>
+</div>
 </main>
 
 <script>
