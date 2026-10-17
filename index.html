@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>越南屠夫</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f6f8fc;
+  font-family: Arial, sans-serif;
+  color: #202124;
+}
+
+header {
+  background: white;
+  padding: 20px;
+  font-size: 22px;
+  border-bottom: 1px solid #ddd;
+}
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.player {
+  background: #17191f;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 25px;
+  background: #8ab4f8;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.notice {
+  color: #ddd;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<header>Bitly短網址</header>
+
+<main>
+  <h2>慎入.mp4</h2>
+  <p>影片檔案 · 點擊下方按鈕預覽</p>
+
+  <div class="player">
+    <h3 id="heading">🎬慎入.mp4</h3>
+    </p>
+    <button id="start">▶ 播放</button>
+
+    <video id="video" controls playsinline
+           style="display:none">
+      <source src="horror.mp4" type="video/mp4">
+      無法播放影片。
+    </video>
+  </div>
+</main>
+
+<script>
+const button = document.getElementById("start");
+const video = document.getElementById("video");
+
+button.addEventListener("click", () => {
+  button.style.display = "none";
+  document.getElementById("heading").style.display = "none";
+  document.getElementById("notice").style.display = "none";
+  video.style.display = "block";
+  video.play();
+});
+</script>
+
+</body>
+</html>
