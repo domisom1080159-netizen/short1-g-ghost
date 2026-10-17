@@ -4,9 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>越南屠夫(慎入)</title>
+<title>越南屠夫（慎入）</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -36,68 +39,35 @@ main {
   text-align: center;
 }
 
-button {
-  padding: 14px 28px;
-  border: none;
-  border-radius: 25px;
-  background: #8ab4f8;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 video {
+  display: block;
   width: 100%;
   border-radius: 10px;
-}
-
-.notice {
-  color: #ddd;
-  font-size: 14px;
+  background: black;
 }
 </style>
 </head>
+
 <body>
 
-<header>Bitly短網址</header>
+<header>影片檔案預覽</header>
 
 <main>
-  <h2>越南屠夫(慎入).mp4</h2>
-  <p>影片檔案 · 點擊下方按鈕預覽</p>
+  <h2>越南屠夫（慎入）.mp4</h2>
+  <p>影片檔案 · 點擊播放</p>
 
   <div class="player">
-    <h3 id="heading">🎬 越南屠夫(慎入).mp4</h3>
-    <p id="notice" class="notice">
-     
-    </p>
-    <button id="start">▶ 播放</button>
-
-    <div class="player">
-  <video
-    id="video"
-    controls
-    playsinline
-    preload="metadata"
-    style="width:100%; display:block;"
-  >
-    <source src="./horror.mp4" type="video/mp4">
-    您的瀏覽器不支援影片播放。
-  </video>
-</div>
+    <video
+      id="video"
+      controls
+      playsinline
+      preload="metadata"
+    >
+      <source src="./horror.mp4" type="video/mp4">
+      您的瀏覽器不支援影片播放。
+    </video>
+  </div>
 </main>
-
-<script>
-const button = document.getElementById("start");
-const video = document.getElementById("video");
-
-button.addEventListener("click", () => {
-  button.style.display = "none";
-  document.getElementById("heading").style.display = "none";
-  document.getElementById("notice").style.display = "none";
-  video.style.display = "block";
-  video.play();
-});
-</script>
 
 </body>
 </html>
-
